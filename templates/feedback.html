@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Feedback</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🍲 Give Your Feedback</h1>
+        <form action="/feedback" method="POST">
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="food_item">Food Item:</label><br>
+            <input type="text" id="food_item" name="food_item" required><br><br>
+
+            <label for="rating">Rating (1-5):</label><br>
+            <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
+
+            <label for="comment">Your Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
+
+            <button type="submit" class="btn">Submit Feedback</button>
+        </form>
+        <br>
+        <a href="/">⬅ Back to Home</a>
+    </div>
+</body>
+</html>

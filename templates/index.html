@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Feedback</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🍽️ Welcome to Our Restaurant</h1>
+        <p>We value your feedback! Scan the QR code below to give your feedback on the food.</p>
+
+        <!-- QR Code -->
+        <div>
+            <img src="{{ url_for('static', filename='feedback_qr.png') }}" alt="Scan QR code" width="200">
+        </div>
+
+        <br>
+        <p>Or access the feedback form directly:</p>
+        <a href="/feedback" class="btn">Give Feedback</a>
+
+        <hr>
+        <p>Owners: <a href="/login">Login Here</a> to view all feedbacks.</p>
+    </div>
+</body>
+</html>
